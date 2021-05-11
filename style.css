@@ -1,0 +1,389 @@
+:root {
+    --gap: 15px;
+}
+
+
+html {
+    background: wheat;
+}
+
+.contenedor-grid {
+    display: grid;
+    color: white;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 60px 35px 350px 300px 500px 150px;
+    grid-template-areas: 
+        "header header2 header3" 
+        "nav nav nav2"
+        "frase frase frase"
+        "content content1 content2"
+        "opciones opciones opciones"
+        "footer footer footer";
+    min-height: 100vh;
+}
+
+        header {
+            
+            grid-area: header;
+            background-color: wheat;
+            
+        }
+
+        header2 {
+            padding: 10px;
+            grid-area: header2;
+            background-color: wheat;
+            
+        }
+
+        header3 {
+            padding: 10px;
+            grid-area: header3;
+            background-color: wheat;
+        }
+
+        nav {
+          margin-left: 300px;
+          margin-right: 300px;
+          grid-area: nav;
+          box-sizing: border-box;
+          background-color: wheat;
+          position: sticky;
+          top: 0;
+          text-align: center;
+          
+          }
+
+          li {
+              display: inline-block;
+              padding: 40px;
+              padding-top: 0;
+              padding-bottom: 0;
+              border-bottom: 2px solid transparent;
+          }
+              ul.menu {
+                  list-style: none;
+                  color: black;
+                  font-weight: bold;
+                  font-family: sans-serif;
+                  grid-auto-flow: column;
+                  margin: auto;
+              }
+
+              li.desplegable {
+                  position: relative;
+              }
+  
+
+              ul.sub-menu {
+                  list-style: none;
+                  color: black;
+                  list-style: none;
+                  }
+
+              li:hover {
+                  border-bottom: 2px solid black;
+              }
+
+              li > ul.sub-menu {
+                  display: none;
+                  position: absolute;
+                  background: white;
+                  }
+
+              li:hover > ul {
+                  border-bottom: 2px solid black;
+                  display: grid;
+              }
+        
+
+        nav2 {
+            padding: 10px;
+            grid-area: nav2;
+            background-color: wheat;
+        }
+        frase {
+            padding: 10px;
+            grid-area: frase;
+            background: black;
+        }
+
+
+        main {
+            padding: 26px;
+            grid-area: content1;
+            background: white;
+        }
+
+        section {
+            padding: 26px;
+            grid-area: content2;
+            background: white;
+        }
+
+        aside {
+            padding: 8px;
+            grid-area: content;
+            background: white;
+            }
+
+        section2 {
+            padding: 20px;
+            grid-area: opciones;
+            background:rgb(255, 255, 255);
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr;
+            grid-template-rows: 85px 2fr 10px 2fr;
+            grid-template-areas: 
+            "titulo1 titulo2 titulo3"
+            "estilo estilo estilo"
+            "espacio espacio espacio"
+            "estilo2 estilo2 estilo2";
+
+        }
+        
+        titulo1 {
+          padding: 26px;
+          grid-area: titulo1;
+          background:rgb(192, 64, 64);
+        }
+
+        titulo2 {
+          padding: 26px;
+          grid-area: titulo2;
+          background:rgb(192, 64, 64);
+        }
+
+        titulo3 {
+          padding: 26px;
+          grid-area: titulo3;
+          background:rgb(192, 64, 64);
+        }
+
+        estilo {
+          padding: 26px;
+          grid-area: estilo;
+          background: rgb(255, 255, 255);
+        }
+
+        espacio {
+          padding: 0px;
+          grid-area: espacio;
+          background: rgb(0, 0, 0);
+        }
+
+        estilo2 {
+          padding: 26px;
+          grid-area: estilo2;
+          background: white;
+        }
+
+
+                          
+        footer {
+            padding: 10px;
+            grid-area: footer;
+            background: blue;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10px auto 10px;
+            grid-template-areas: 
+            "separador"
+            "informacion"
+            "separador2";
+        }
+
+        separador {
+          padding: 0px;
+          grid-area: separador;
+          background: rgb(0, 0, 0);
+          }
+
+        h1 {
+            font-weight: normal;
+            font-family: 'Dela Gothic One', cursive;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: 20px;
+            color: black;
+            }
+
+          h2 {
+            font-weight: normal;
+            text-align: center;
+            font-family: 'Dela Gothic One', cursive;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            gap: 15px;
+            color: black;
+            }
+
+        h3 {
+            font-weight: normal;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            gap: 15px;
+        }
+
+        img.mediana{
+            width: 500px; height: 320px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          img.logos {
+            width: 100px; height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+          
+
+        /* Esto de abajo es del boton de barrita*/
+
+        #subscribe {
+            display: grid;
+            grid-template-columns: 3fr 0.5fr;
+            height: 35px;
+            box-shadow: 0px 2px 12px rgba(0,0,0,.3);
+            }
+
+        button {
+            background-color: gold;
+            border: none;
+            font-weight: bold;
+            color: gray;
+          }
+
+          .lupita {
+            width: 20px;
+            height: 20px;
+        }
+
+          input {
+            border: none;
+            padding: 5px 8px;
+            font-size: 1rem;
+          }
+
+          li {
+            display: inline-block;
+          }
+
+          a {
+            text-align: center;
+            border-right: 1px solid black;
+            margin-left: 10px;
+            padding-right: 10px;
+            color: black;
+            font-family: 'Lobster', cursive;
+            text-decoration: none;
+          }
+
+          li:last-of-type a{
+            border-right: 0;
+          }
+          /* Esto es del boton */
+
+
+          /* LAS IMAGENES*/
+
+          .container{
+            margin: auto;
+            background-color:black;
+            width: 1000px;
+            padding: 10px;
+          }
+          
+          ul, li {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+          }
+          
+          ul.slider{
+            position: relative;
+            width: 802px;
+            height: 235px;
+          }
+          
+          ul.slider li {
+              position: absolute;
+              left: 0px;
+              top: 0px;
+              opacity: 0;
+              width: inherit;
+              height: inherit;
+              transition: opacity .5s;
+              background:black;
+          }
+          
+          ul.slider li img{
+            width: 122%;
+            height: 230px;
+            object-fit: cover;
+          }
+          
+          ul.slider li:first-child {
+              opacity: 1; /*Mostramos el primer <li>*/
+          }
+          
+          ul.slider li:target {
+              opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+          }
+          
+          .menu{
+            text-align: center;
+            margin: 20px;
+          }
+          
+          .menu li{
+            display: inline-block;
+            text-align: center;
+          }
+          
+          .menu li a{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            color: white;
+            text-decoration: none;
+            background-color: grey;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+            border-radius: 100%;
+          }
+
+        .seleccion {
+            width: 250px;
+            padding: 10px;
+            
+        }
+   /* LAS IMAGENES*/
+
+@media screen and (max-width: 700px) {
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 50px 1fr;
+        grid-template-areas: 
+            "header" 
+            "nav"
+            "content"
+            "footer";
+    }
+  }
